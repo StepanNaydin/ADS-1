@@ -9,9 +9,8 @@ bool checkPrime(uint64_t value) {
 	if (value == 2)
 		return x;
 	for (int q = 2; q < sqrt(value) + 1; q++) {
-		if (value % q == 0){
+		if (value % q == 0)
 			x = false;
-		}
 	}
 	return x;
 }
@@ -23,9 +22,8 @@ uint64_t nPrime(uint64_t n) {
 		c++;
 		if (c != 2) {
 			for (int q = 2; q < sqrt(c) + 1; q++) {
-				if (c % q == 0){
+				if (c % q == 0)
 					x = false;
-				}
 			}
 		}
 		//std::cout << x;
@@ -44,13 +42,11 @@ uint64_t nextPrime(uint64_t value) {
 		bool x = true;
 		c++;
 		for (int q = 2; q < sqrt(c) + 1; q++) {
-			if (c % q == 0){
+			if (c % q == 0)
 				x = false;
-			}
 		}
-		if (x == true){
+		if (x == true)
 			return c;
-		}
 	}
 }
 
@@ -61,9 +57,8 @@ uint64_t sumPrime(uint64_t hbound) {
 	for (int q = 2; q < hbound; q++) {
 		bool x = true;
 		for (int w = 2; w < sqrt(q) + 1; w++) {
-			if (q % w == 0){
+			if (q % w == 0)
 				x = false;
-			}
 		}
 		if (x == true){
 			sum += q;
